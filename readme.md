@@ -31,8 +31,11 @@ PuttyGPT is a conversational AI project powered by OpenAI's GPT-4, Weaviate for 
 Clone the repository and navigate to the project directory:
 
 ```
-git clone https://github.com/yourusername/puttygpt.git
-cd puttygpt
+git clone https://github.com/webgrip/CogniSwarm.git
+cd CogniSwarm
+cp .env.example .env
+sed -i "s|ReplaceWithARealKey\!|$(openssl rand -base64 33)|g" .env
+# Now change your .env values #
 
 ```
 (Put this in init.sh later or makefile)
@@ -48,11 +51,10 @@ docker-compose -f docker-compose.weaviate.yml -f docker-compose.yml up --build
 # With grpc endpoint (run this after previous)
 docker-compose -f docker-compose.weaviate.yml -f docker-compose.yml -f docker-compose.brazen.yml up brazen --build
 
-# Copy env file
-cp .env.example .env
+
 
 # replace the string for searxng
-sed -i "s|ReplaceWithARealKey\!|$(openssl rand -base64 33)|g" .env
+
 
 ```
 
