@@ -51,11 +51,6 @@ docker-compose -f docker-compose.weaviate.yml -f docker-compose.yml up --build
 # With grpc endpoint (run this after previous)
 docker-compose -f docker-compose.weaviate.yml -f docker-compose.yml -f docker-compose.brazen.yml up brazen --build
 
-
-
-# replace the string for searxng
-
-
 ```
 
 Cleanup:
