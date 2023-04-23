@@ -34,7 +34,7 @@ Clone the repository and navigate to the project directory:
 git clone https://github.com/webgrip/CogniSwarm.git
 cd CogniSwarm
 cp .env.example .env
-sed -i "s|ReplaceWithARealKey\!|$(openssl rand -base64 33)|g" .env
+sed -i "s|ReplaceWithARealKey\!|$(openssl rand -base64 33)|g" searxng/settings.yml
 # Now change your .env values #
 
 ```
