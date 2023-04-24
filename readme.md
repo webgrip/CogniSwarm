@@ -61,16 +61,16 @@ CogniSwarm is a state-of-the-art AGI (Autonomous Generative Instrument) designed
 
 ## Relevant Uses
 
-- [ ] **Virtual Assistants**: Personal or professional use for a wide range of tasks
-- [ ] **Intelligent Document Automation**: Streamline document creation and processing
-- [ ] **Real-time Market Analysis**: Data-driven decision making for businesses
-- [ ] **Rapid Prototyping & Idea Generation**: Expedite innovation and development
-- [ ] **API & Service Integration**: Extend functionality with various APIs and services
-- [ ] **File System Optimization**: Execute control over users' computers for improved efficiency
-- [ ] **User-friendly UI Creation**: Design on-the-fly interfaces with plain language prompts
-- [ ] **Website Management**: Develop and manage marketing, social media, and other web-based projects using Streamlit
-- [ ] **Financial Analysis**: Optimize spending efficiency without sacrificing quality of life
-- [ ] **Data Collection & Model Training**: Preprocess and tokenize training data for specialized models, and initiate training on user's Docker instance
+- [x] **Virtual Assistants**: Personal or professional use for a wide range of tasks
+- [x] **Intelligent Document Automation**: Streamline document creation and processing
+- [x] **Real-time Market Analysis**: Data-driven decision making for businesses
+- [x] **Rapid Prototyping & Idea Generation**: Expedite innovation and development
+- [1/2] **API & Service Integration**: Extend functionality with various APIs and services
+- [1/2] **File System Optimization**: Execute control over users' computers for improved efficiency
+- [1/2] **User-friendly UI Creation**: Design on-the-fly interfaces with plain language prompts
+- [1/2] **Website Management**: Develop and manage marketing, social media, and other web-based projects using Streamlit
+- [x] **Financial Analysis**: Optimize spending efficiency without sacrificing quality of life
+- [1/2] **Data Collection & Model Training**: Preprocess and tokenize training data for specialized models, and initiate training on user's Docker instance
 
 ### Installation
 
