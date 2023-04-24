@@ -77,8 +77,8 @@ CogniSwarm is a state-of-the-art AGI (Autonomous Generative Instrument) designed
 Clone the repository and navigate to the project directory:
 
 ```
-git clone https://github.com/yourusername/puttygpt.git
-cd puttygpt
+git clone https://github.com/webgrip/cogniswarm.git
+cd cogniswarm
 ```
 
 (Put this in init.sh later or makefile) Build and run the Docker containers using the provided docker-compose files
