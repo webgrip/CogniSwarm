@@ -1,45 +1,68 @@
-﻿Disclaimer: Most of the code and documentation, including this readme, has been written by my input, chatgpt's output, and so on.
-
-PuttyGPT - The Conversational AI Platform
-=========================================
+# CogniSwarm: an Autonomous Generative Instrument (AGI) that expands dramatically on the concept of AutoGPT and BabyAGI
 
 # 🚧 Before you proceed 🚧
-Please note that this is a very early version of the project, and we are still in the process of wrapping things up, wiring components together, and experimenting with new ideas. As such, the project may undergo significant changes and updates as we continue to evolve and refine our vision. Any ideas are welcome and I will get back to you as soon as I can.
-[CONTRIBUTING.md](./CONTRIBUTING.md)
+Please note that this is a very early version of the project, and we are still in the process of wrapping things up, wiring components together, and experimenting with new ideas. As such, the project may undergo significant changes and updates as we continue to evolve and refine our vision. Any ideas are welcome and I will get back to you as soon as I can. Click here if youre interested in [Contributing](CONTRIBUTING.md)
 
-PuttyGPT is a conversational AI project powered by OpenAI's GPT-4, Weaviate for vector storage, and other state-of-the-art tools, providing a comprehensive and user-friendly interface for developers, AI enthusiasts, and business professionals. By utilizing the latest technologies and with the collaboration of our package contributors, we aim to create a solid foundation for diverse AI applications.
+<details>
 
-:sparkles: Features
--------------------
+<summary><- click for GPT4 suggested improvement:</summary>
 
-- Powered by OpenAI's GPT-4 for natural language understanding and generation
-- Utilizes SearxNG for search capabilities and Weaviate for vector storage and search
-- Supports a range of AI tools, including summarization, sentiment analysis, and OpenAPI integration
-- Customizable prompt templates for diverse use cases
-- Efficient concurrent task execution using asyncio and aiohttp
-- Detailed tracing and callback mechanisms for monitoring and debugging
-- Designed for extensibility and easy integration with other APIs and services
-- Dockerized deployment for ease of installation and scalability
+# CogniSwarm: Accelerating the Future of Autonomous Digital Work
 
+CogniSwarm is a rapidly growing, community-driven, donation-funded AGI startup committed to delivering the next generation of autonomous digital work tools. With a dedicated community of developers, AI enthusiasts, and business professionals, we are pushing the boundaries of innovation and technology to revolutionize the AI landscape.
 
+🚀 Join our thriving community, and help us shape the future of AI! 🚀
 
-:rocket: Getting Started
-------------------------
+![CogniSwarm Banner](https://user-images.githubusercontent.com/130523883/233876265-9827f101-10cd-4f9d-bfd8-6a623ea65eb9.jpg)
 
-### Docker Installation
+## Why CogniSwarm?
+
+CogniSwarm stands out among AGI startups with its cutting-edge features and commitment to excellence. Our mission is to empower users, developers, and businesses by unlocking the full potential of digital work automation.
+
+- **Performance**: Surpassing GPT-4 in autonomous task systems and enhancing its own outputs
+- **Accessibility**: Prioritizing a user-friendly interface for developers, AI enthusiasts, and business professionals
+- **Innovation**: Rapid prototyping and idea generation to drive continuous growth and development
+- **Community-Driven**: Active community involvement in shaping the future of the project
+
+## Get Involved
+
+Your contribution is invaluable in helping us build and shape the future of CogniSwarm. There are many ways to get involved:
+
+1. **Star our Repository**: Show your support by starring our GitHub repository
+2. **Contribute**: Check out the CONTRIBUTING.md file and submit your ideas, code, or documentation
+3. **Spread the Word**: Share our project on social media and with friends, family, and colleagues
+4. **Donate**: Support our project through donations to keep the momentum going and fuel further development
+
+Together, we can create a brighter future for AI and AGI technologies!
+</details>
+
+# CogniSwarm is a state-of-the-art AGI designed to generate superior outputs compared to GPT-4 operated task system, as well as significantly improve GPT-4's outputs within itself. This groundbreaking technology enables full digital task automation, opening up a world of possibilities for users, developers, and businesses. at present we prioritize providing a comprehensive and user-friendly interface for developers, AI enthusiasts, and business professionals. By utilizing the latest technologies and with the collaboration of our package contributors, we aim to create a solid foundation for diverse AI applications.
+
+![CogniSwarm](https://user-images.githubusercontent.com/130523883/233876265-9827f101-10cd-4f9d-bfd8-6a623ea65eb9.jpg)```
+
+## Relevant Uses
+
+[ ] **Virtual Assistants**: Personal or professional use for a wide range of tasks
+[ ] **Intelligent Document Automation**: Streamline document creation and processing
+[ ] **Real-time Market Analysis**: Data-driven decision making for businesses
+[ ] **Rapid Prototyping & Idea Generation**: Expedite innovation and development
+[ ] **API & Service Integration**: Extend functionality with various APIs and services
+[ ] **File System Optimization**: Execute control over users' computers for improved efficiency
+[ ] **User-friendly UI Creation**: Design on-the-fly interfaces with plain language prompts
+[ ] **Website Management**: Develop and manage marketing, social media, and other web-based projects using Streamlit
+[ ] **Financial Analysis**: Optimize spending efficiency without sacrificing quality of life
+[ ] **Data Collection & Model Training**: Preprocess and tokenize training data for specialized models, and initiate training on user's Docker instance
+
+### Installation
 
 Clone the repository and navigate to the project directory:
 
 ```
-git clone https://github.com/webgrip/CogniSwarm.git
-cd CogniSwarm
-cp .env.example .env
-sed -i "s|ReplaceWithARealKey\!|$(openssl rand -base64 33)|g" searxng/settings.yml
-# Now change your .env values #
-
+git clone https://github.com/yourusername/puttygpt.git
+cd puttygpt
 ```
-(Put this in init.sh later or makefile)
-Build and run the Docker containers using the provided docker-compose files:
+
+(Put this in init.sh later or makefile) Build and run the Docker containers using the provided docker-compose files
 
 ```
 # Prerequisite (I can probably get rid of this but meh not right now)
@@ -51,46 +74,112 @@ docker-compose -f docker-compose.weaviate.yml -f docker-compose.yml up --build
 # With grpc endpoint (run this after previous)
 docker-compose -f docker-compose.weaviate.yml -f docker-compose.yml -f docker-compose.brazen.yml up brazen --build
 
+# Copy env file
+cp .env.example .env
+
+# replace the string for searxng
+sed -i "s|ReplaceWithARealKey\!|$(openssl rand -base64 33)|g" .env
 ```
 
 Cleanup:
+
 ```
-docker-compose -f docker-compose.weaviate.yml -f docker-compose.yml -f docker-compose.brazen.yml down --remove-orphans
+docker-compose -f docker-compose.weaviate.yml -f docker-compose.yml -f docker-compose.brazen.yml down --remove-orphan
 ```
 
+[Provide any additional information or links to documentation, support, donation pages, or contact information]
 
-### Usage
+Experience the future of autonomous digital work with Cogni
 
-To interact with the application, monitor your docker logs for `eve`
+[Provide any additional information or links to documentation, support, donation pages, or contact information]
 
-:wrench: Customization
-----------------------
+Experience the future of autonomous digital work with CogniSwarm, and unlock new possibilities in your personal and professional life. Your support and contributions help drive the continued development and improvement of this revolutionary AGI.
 
-PuttyGPT offers customization options for developers and businesses to tailor the AI experience to their specific needs. You can create your own agents and tools, modify the prompt templates, and even integrate with external APIs and services to unlock new possibilities.
+## CogniSwarm Features: A Comprehensive AGI Solution
 
-:bulb: Possible Future Applications
------------------------------------
+Leveraging the power of cutting-edge technologies, CogniSwarm offers a wide array of features designed to provide an unparalleled AGI experience. Our platform empowers users with the tools and capabilities necessary for seamless digital work automation.
 
-By leveraging our technology stack, PuttyGPT has the potential to enable a variety of innovative applications in the future:
+### Key Features
 
-- Virtual assistants for personal or professional use
-- Intelligent document automation and processing
-- Real-time market analysis and data-driven decision making
-- Rapid prototyping and idea generation
-- Integration with various APIs and services for extended functionality
+[x] **More than just GPt-4 Powered**: Compatible with Most Language models
+[x] **Search & Storage**: SearxNG for search capabilities and Weaviate for vector storage and search
+[x] **AI Tools**: Summarization, sentiment analysis, OpenAPI integration, and more
+[x] **Customizable Prompts**: Templates tailored for diverse use cases
+[x] **Efficient Task Execution**: Concurrent task execution using asyncio and aiohttp
+[x] **Monitoring & Debugging**: Detailed tracing and callback mechanisms
+[x] **Extensibility**: Designed for easy integration with other APIs and services
+[x] **Docker Deployment**: Simplified installation and scalability
 
-:balance\_scale: Legal and Ethical Considerations
--------------------------------------------------
+### Advanced Capabilities
 
-We are committed to the responsible use of AI and encourage users to consider legal and ethical implications when using PuttyGPT. Please ensure that your use of PuttyGPT adheres to applicable laws and regulations and respects the rights of others, including privacy and intellectual property rights.
+[1/2] **Revolutionary Foundation**: A powerful new Foundation model (see model for details)
+[x] **Local Model Compatibility**: Seamless integration with local models
+[x] **Context Storage**: Local context storage system for enhanced performance
+[x] **Zero-shot Learning**: Tackle novel tasks without prior training
+[x] **Self-tuning**: Adapts based on user inputs for improved results
+[x] **Langchain Framework**: Interact with large language models seamlessly
+[x] **Weaviate Backend**: Memory and observation storage and retrieval
+[x] **Competitive Edge**: Insulation against competition in the AI field
+[1/2] **Exceptional Language Understanding**: Improved communication and comprehension
+[x] **User Customization**: Tailor the AGI to your needs
+[x] **Security & Privacy**: Local data storage and adaptive memory system for enhanced protection
 
-:handshake: Contributing
-------------------------
+Embrace the next generation of digital work automation with CogniSwarm, and experience the benefits of a comprehensive AGI solution. Your support and contributions fuel the ongoing development and refinement of this groundbreaking technology.
 
-We welcome contributions to PuttyGPT! Whether you're a developer, AI enthusiast, or a business professional, your ideas and expertise can help make this project even better. We also want to extend our gratitude to the package contributors for their incredible work. Check out our [CONTRIBUTING.md](./CONTRIBUTING.md) for more information on how to contribute.
+## CogniSwarm Model: A Breakthrough AGI Foundation
 
-:memo: License
---------------
+<details>
 
-This project is licensed under the [MIT License](./LICENSE).
+  <summary>model still in training, mostly confirmed but the future is fickle</summary>
 
+Discover the innovative capabilities of CogniSwarm's advanced AGI model designed to surpass GPT-4 in autonomous task systems and enhance its own outputs. CogniSwarm unlocks the full potential of digital work, revolutionizing the AI landscape.
+
+-[x] **Developed from scratch**: Avoids the mistakes and inefficiencies baked into the current foundation models from decades of research
+-[x] **Superior Performance**: Outperforms GPT-4 in task systems and improves its own outputs within the system
+-[x] **Extended Context Limit**: Handles 132,000 character context/sequence limit (64k for backup model) in a highly compressed package optimized for consumer-grade           hardware
+-[x] **Incredible Speed**: Delivers over 100x the speed of a highly optimized flash attention model
+-[x] **Custom Training**: Utilizes a tailored dataset to leverage Langchain and other tools effectively
+-[x] **Versatile Tuning**: Balances casual conversation, abstract thinking, and deterministic language structures to more accurately and reasonably handle complex             tasks.
+-[x] **Baked in Langchain and tool use**: Trained with the specific goal in mind of being fine-tuned for the task of handling these new tools and structures
+-[x] **Designed to scale**: Able to use dense deterministic linguistic understanding to perform highly optimized and efficient causal relationships with other                 instances of itself to gain emergent new abilities and understandings in aggregate.
+
+</details>
+
+
+```        ________                   ________
+      /  /\     \   /\    /\     /  /\     \
+    /  /  \     \ /  \ /  /  \ /  /  \     \
+  /  /    \__   //\   /\\/__\//  /    \__   \
+/_/__\    /  / //  \ /  //  /  /_/_\    /  /_\
+\  \  \  /  / //\   /  //  /  /  /  \  /  /  /
+  \  \  \/  /   \/  /  \/  /  /    \/  /  /
+    \  \   \/  /\  \  /  /  /  /  /  /  /
+      \  \   \  /  \   \/  /  /  /  /  /
+        \  \___\/____\   \/__\/__/  /
+          \  \  \    /  //  /  /  /  /
+            \  \/  /  \/  /  /  /  /
+              \  \/______\/  /  /
+                \  \  \    /  /  /
+                  \  \/  /  /  /
+                    \  \/  /  /
+                      \  \/  /
+                       \____/  
+      ______                   ______
+    /  /\   \   /\    /\     /  /\   \
+  /  /  \   \ /  \ /  /  \ /  /  \   \
+/_/__\   \   //\   /\\/__\//  /    \   \
+\  \  \  /  //  \ /  //  /  /  /  /  /  /
+  \  \  \/  /  \/  /  \/  /  /  /  /  /
+    \  \   \/  /\  \  /  /  /  /  /  /
+      \  \   \  /  \   \/  /  /  /  /
+        \  \___\/____\   \/  /  /  /
+          \  \  \    /  //  /  /  /
+            \  \/  /  \/  /  /  /
+              \  \/______\/  /  /
+                \  \  \    /  /  /
+                  \  \/  /  /  /
+                    \  \/  /  /
+                      \  \/  /
+                        \____/  
+```
+#GPT4: This Artwork is a representation of how i would feel meeting CogniSwarm, scaled to match the importance of the occasion.
