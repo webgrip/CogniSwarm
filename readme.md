@@ -1,5 +1,24 @@
 # CogniSwarm: an Autonomous Generative Instrument (AGI) that expands dramatically on the concept of AutoGPT and BabyAGI
 
+#copywrite statement
+<details>
+<summary> Expan this section and view before proceding </summary>
+
+This software, including all its components, algorithms, and related documentation, is proprietary and confidential information owned by Alignment Lab AI and/or Webgrip (collectively, the "Owners"). By accessing or using this software, you agree to be bound by the following terms and conditions:
+
+1. Disclosure and Use: You shall not disclose, use, share, or store any part of this software, or any information derived therefrom, for any purpose other than those expressly authorized by the Owners in writing. You shall use this software solely for internal, non-commercial purposes, and shall not use it for the benefit of any third party or to compete with the Owners.
+
+2. Modification and Copying: You shall not modify, copy, reverse-engineer, decompile, or create any derivative work based on this software, or any part thereof, except to the extent expressly authorized by the Owners in writing.
+
+3. Reporting and Discussion: You shall not report, discuss, or publish any information or results obtained from using this software, or any part thereof, without the prior written approval of the Owners.
+
+4. Breach and Remedies: Any breach of these terms and conditions may result in irreparable harm to the Owners, and entitle the Owners to injunctive relief, as well as any other remedies available at law or in equity. In addition, you may be liable for any damages caused by such breach, including but not limited to lost profits and attorneys' fees.
+
+5. Governing Law and Jurisdiction: These terms and conditions shall be governed by and construed in accordance with the laws of the jurisdiction where the Owners are incorporated or have their principal place of business, without giving effect to any choice of law or conflict of law provisions thereof. Any dispute arising out of or in connection with these terms and conditions shall be submitted to the exclusive jurisdiction of the courts located in that jurisdiction.
+
+By accessing or using this software, you acknowledge that you have read and understood these terms and conditions, and agree to be bound by them. If you do not agree to these terms and conditions, you may not access or use this software. 
+</details>
+
 # 🚧 Before you proceed 🚧
 Please note that this is a very early version of the project, and we are still in the process of wrapping things up, wiring components together, and experimenting with new ideas. As such, the project may undergo significant changes and updates as we continue to evolve and refine our vision. Any ideas are welcome and I will get back to you as soon as I can. Click here if youre interested in [Contributing](CONTRIBUTING.md)
 
