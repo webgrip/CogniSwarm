@@ -57,7 +57,7 @@ Together, we can create a brighter future for AI and AGI technologies!
 
 CogniSwarm is a state-of-the-art AGI (Autonomous Generative Instrument) designed to generate superior outputs compared to GPT-4 operated task system, as well as significantly improve GPT-4's outputs within itself. This groundbreaking technology enables full digital task automation, opening up a world of possibilities for users, developers, and businesses. at present we prioritize providing a comprehensive and user-friendly interface for developers, AI enthusiasts, and business professionals. By utilizing the latest technologies and with the collaboration of our package contributors, we aim to create a solid foundation for diverse AI applications.
 
-![CogniSwarm](https://user-images.githubusercontent.com/130523883/233876265-9827f101-10cd-4f9d-bfd8-6a623ea65eb9.jpg)```
+![CogniSwarm](https://user-images.githubusercontent.com/130523883/233876265-9827f101-10cd-4f9d-bfd8-6a623ea65eb9.jpg)
 
 ## Relevant Uses
 
