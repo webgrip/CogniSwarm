@@ -42,16 +42,16 @@ Together, we can create a brighter future for AI and AGI technologies!
 
 ## Relevant Uses
 
-[ ] **Virtual Assistants**: Personal or professional use for a wide range of tasks
-[ ] **Intelligent Document Automation**: Streamline document creation and processing
-[ ] **Real-time Market Analysis**: Data-driven decision making for businesses
-[ ] **Rapid Prototyping & Idea Generation**: Expedite innovation and development
-[ ] **API & Service Integration**: Extend functionality with various APIs and services
-[ ] **File System Optimization**: Execute control over users' computers for improved efficiency
-[ ] **User-friendly UI Creation**: Design on-the-fly interfaces with plain language prompts
-[ ] **Website Management**: Develop and manage marketing, social media, and other web-based projects using Streamlit
-[ ] **Financial Analysis**: Optimize spending efficiency without sacrificing quality of life
-[ ] **Data Collection & Model Training**: Preprocess and tokenize training data for specialized models, and initiate training on user's Docker instance
+- [ ] **Virtual Assistants**: Personal or professional use for a wide range of tasks
+- [ ] **Intelligent Document Automation**: Streamline document creation and processing
+- [ ] **Real-time Market Analysis**: Data-driven decision making for businesses
+- [ ] **Rapid Prototyping & Idea Generation**: Expedite innovation and development
+- [ ] **API & Service Integration**: Extend functionality with various APIs and services
+- [ ] **File System Optimization**: Execute control over users' computers for improved efficiency
+- [ ] **User-friendly UI Creation**: Design on-the-fly interfaces with plain language prompts
+- [ ] **Website Management**: Develop and manage marketing, social media, and other web-based projects using Streamlit
+- [ ] **Financial Analysis**: Optimize spending efficiency without sacrificing quality of life
+- [ ] **Data Collection & Model Training**: Preprocess and tokenize training data for specialized models, and initiate training on user's Docker instance
 
 ### Installation
 
@@ -101,32 +101,32 @@ Leveraging the power of cutting-edge technologies, CogniSwarm offers a wide arra
 
 ### Key Features
 
-[x] **More than just GPt-4 Powered**: Compatible with Most Language models
-[x] **Search & Storage**: SearxNG for search capabilities and Weaviate for vector storage and search
-[x] **AI Tools**: Summarization, sentiment analysis, OpenAPI integration, and more
-[x] **Customizable Prompts**: Templates tailored for diverse use cases
-[x] **Efficient Task Execution**: Concurrent task execution using asyncio and aiohttp
-[x] **Monitoring & Debugging**: Detailed tracing and callback mechanisms
-[x] **Extensibility**: Designed for easy integration with other APIs and services
-[x] **Docker Deployment**: Simplified installation and scalability
+- [x] **More than just GPt-4 Powered**: Compatible with Most Language models
+- [x] **Search & Storage**: SearxNG for search capabilities and Weaviate for vector storage and search
+- [x] **AI Tools**: Summarization, sentiment analysis, OpenAPI integration, and more
+- [x] **Customizable Prompts**: Templates tailored for diverse use cases
+- [x] **Efficient Task Execution**: Concurrent task execution using asyncio and aiohttp
+- [x] **Monitoring & Debugging**: Detailed tracing and callback mechanisms
+- [x] **Extensibility**: Designed for easy integration with other APIs and services
+- [x] **Docker Deployment**: Simplified installation and scalability
 
 ### Advanced Capabilities
 
-[1/2] **Revolutionary Foundation**: A powerful new Foundation model (see model for details)
-[x] **Local Model Compatibility**: Seamless integration with local models
-[x] **Context Storage**: Local context storage system for enhanced performance
-[x] **Zero-shot Learning**: Tackle novel tasks without prior training
-[x] **Self-tuning**: Adapts based on user inputs for improved results
-[x] **Langchain Framework**: Interact with large language models seamlessly
-[x] **Weaviate Backend**: Memory and observation storage and retrieval
-[x] **Competitive Edge**: Insulation against competition in the AI field
-[1/2] **Exceptional Language Understanding**: Improved communication and comprehension
-[x] **User Customization**: Tailor the AGI to your needs
-[x] **Security & Privacy**: Local data storage and adaptive memory system for enhanced protection
+- [1/2] **Revolutionary Foundation**: A powerful new Foundation model (see model for details)
+- [x] **Local Model Compatibility**: Seamless integration with local models
+- [x] **Context Storage**: Local context storage system for enhanced performance
+- [x] **Zero-shot Learning**: Tackle novel tasks without prior training
+- [x] **Self-tuning**: Adapts based on user inputs for improved results
+- [x] **Langchain Framework**: Interact with large language models seamlessly
+- [x] **Weaviate Backend**: Memory and observation storage and retrieval
+- [x] **Competitive Edge**: Insulation against competition in the AI field
+- [1/2] **Exceptional Language Understanding**: Improved communication and comprehension
+- [x] **User Customization**: Tailor the AGI to your needs
+- [x] **Security & Privacy**: Local data storage and adaptive memory system for enhanced protection
 
 Embrace the next generation of digital work automation with CogniSwarm, and experience the benefits of a comprehensive AGI solution. Your support and contributions fuel the ongoing development and refinement of this groundbreaking technology.
 
-## CogniSwarm Model: A Breakthrough AGI Foundation
+## CogniSwarm Model: A breakthrough foundational AGI model
 
 <details>
 
@@ -134,14 +134,14 @@ Embrace the next generation of digital work automation with CogniSwarm, and expe
 
 Discover the innovative capabilities of CogniSwarm's advanced AGI model designed to surpass GPT-4 in autonomous task systems and enhance its own outputs. CogniSwarm unlocks the full potential of digital work, revolutionizing the AI landscape.
 
--[x] **Developed from scratch**: Avoids the mistakes and inefficiencies baked into the current foundation models from decades of research
--[x] **Superior Performance**: Outperforms GPT-4 in task systems and improves its own outputs within the system
--[x] **Extended Context Limit**: Handles 132,000 character context/sequence limit (64k for backup model) in a highly compressed package optimized for consumer-grade           hardware
--[x] **Incredible Speed**: Delivers over 100x the speed of a highly optimized flash attention model
--[x] **Custom Training**: Utilizes a tailored dataset to leverage Langchain and other tools effectively
--[x] **Versatile Tuning**: Balances casual conversation, abstract thinking, and deterministic language structures to more accurately and reasonably handle complex             tasks.
--[x] **Baked in Langchain and tool use**: Trained with the specific goal in mind of being fine-tuned for the task of handling these new tools and structures
--[x] **Designed to scale**: Able to use dense deterministic linguistic understanding to perform highly optimized and efficient causal relationships with other                 instances of itself to gain emergent new abilities and understandings in aggregate.
+- [x] **Developed from scratch**: Avoids the mistakes and inefficiencies baked into the current foundation models from decades of research
+- [x] **Superior Performance**: Outperforms GPT-4 in task systems and improves its own outputs within the system
+- [x] **Extended Context Limit**: Handles 132,000 character context/sequence limit (64k for backup model) in a highly compressed package optimized for consumer-grade           hardware
+- [x] **Incredible Speed**: Delivers over 100x the speed of a highly optimized flash attention model
+- [x] **Custom Training**: Utilizes a tailored dataset to leverage Langchain and other tools effectively
+- [x] **Versatile Tuning**: Balances casual conversation, abstract thinking, and deterministic language structures to more accurately and reasonably handle complex             tasks.
+- [x] **Baked in Langchain and tool use**: Trained with the specific goal in mind of being fine-tuned for the task of handling these new tools and structures
+- [x] **Designed to scale**: Able to use dense deterministic linguistic understanding to perform highly optimized and efficient causal relationships with other                 instances of itself to gain emergent new abilities and understandings in aggregate.
 
 </details>
 
