@@ -1,8 +1,8 @@
 # CogniSwarm: an Autonomous Generative Instrument (AGI) that expands dramatically on the concept of AutoGPT and BabyAGI
 
-#copywrite statement
+# copywrite statement
 <details>
-<summary> Expan this section and view before proceding </summary>
+<summary> Expand this section and view before proceding </summary>
 
 This software, including all its components, algorithms, and related documentation, is proprietary and confidential information owned by Alignment Lab AI and/or Webgrip (collectively, the "Owners"). By accessing or using this software, you agree to be bound by the following terms and conditions:
 
