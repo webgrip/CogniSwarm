@@ -108,10 +108,6 @@ docker-compose -f docker-compose.weaviate.yml -f docker-compose.yml -f docker-co
 
 [Provide any additional information or links to documentation, support, donation pages, or contact information]
 
-Experience the future of autonomous digital work with Cogni
-
-[Provide any additional information or links to documentation, support, donation pages, or contact information]
-
 Experience the future of autonomous digital work with CogniSwarm, and unlock new possibilities in your personal and professional life. Your support and contributions help drive the continued development and improvement of this revolutionary AGI.
 
 ## CogniSwarm Features: A Comprehensive AGI Solution
