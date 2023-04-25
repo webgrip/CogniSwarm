@@ -49,7 +49,7 @@ Join us on this exciting journey – donate today and be part of the AI revoluti
 Important Notice
 -------------------
 
-While we appreciate all contributions, please keep in mind that we are in the early stages of the project, and significant changes may occur. Therefore, please understand that your contribution might not be merged immediately, or it might be affected by subsequent updates to the project. We still encourage you to contribute, as your ideas and expertise can help shape the future of AI.
+While we appreciate all contributions, please keep in mind that we are in the early stages of the project, and significant changes may occur. Therefore, please understand that your development contribution might not be merged immediately, or it might be affected by subsequent updates to the project. We still encourage you to contribute, as your ideas and expertise can help shape the future of AI.
 
 Code of Conduct
 -----------------
@@ -59,7 +59,7 @@ As a contributor, you are expected to uphold our [Code of Conduct](./CODE_OF_CON
 Questions or Concerns
 -----------------------
 
-If you have any questions or concerns, feel free to reach out to the project maintainers or open an issue on the repository.
+If you have any questions or concerns, feel free to reach out to the project maintainers via cogniswarm@gmail.com or open an issue on the repository.
 
-Again, thank you for your interest in contributing to PuttyGPT! Your efforts can help make this project even more successful. ??
+Again, thank you for your interest in contributing to CogniSwarm! Your efforts can help make this project even more successful. ??
 
