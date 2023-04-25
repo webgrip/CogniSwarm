@@ -28,7 +28,7 @@ Please note that this is a very early version of the project, and we are still i
 
 # CogniSwarm: Accelerating the Future of Autonomous Digital Work
 
-CogniSwarm is a rapidly growing, community-driven, donation-funded AGI startup committed to delivering the next generation of autonomous digital work tools. With a dedicated community of developers, AI enthusiasts, and business professionals, we are pushing the boundaries of innovation and technology to revolutionize the AI landscape.
+CogniSwarm is a rapidly growing, community-driven, donation-funded AGI startup committed to delivering the next generation of autonomous digital tools. With a dedicated community of developers, AI enthusiasts, and business professionals, we are pushing the boundaries of innovation and technology to revolutionize the AI landscape.
 
 🚀 Join our thriving community, and help us shape the future of AI! 🚀
 
@@ -55,7 +55,7 @@ Your contribution is invaluable in helping us build and shape the future of Cogn
 Together, we can create a brighter future for AI and AGI technologies!
 </details>
 
-CogniSwarm is a state-of-the-art AGI (Autonomous Generative Instrument) designed to generate superior outputs compared to GPT-4 operated task system, as well as significantly improve GPT-4's outputs within itself. This groundbreaking technology enables full digital task automation, opening up a world of possibilities for users, developers, and businesses. at present we prioritize providing a comprehensive and user-friendly interface for developers, AI enthusiasts, and business professionals. By utilizing the latest technologies and with the collaboration of our package contributors, we aim to create a solid foundation for diverse AI applications.
+CogniSwarm is a state-of-the-art AGI (Autonomous Generative Inferencer) designed to generate superior outputs compared to GPT-4 operated task system, as well as significantly improve GPT-4's outputs within itself. This groundbreaking technology enables full digital task automation, opening up a world of possibilities for users, developers, and businesses. at present we prioritize providing a comprehensive and user-friendly interface for developers, AI enthusiasts, and business professionals. By utilizing the latest technologies and with the collaboration of our package contributors, we aim to create a solid foundation for diverse AI applications.
 
 ![CogniSwarm](https://user-images.githubusercontent.com/130523883/233876265-9827f101-10cd-4f9d-bfd8-6a623ea65eb9.jpg)
 
