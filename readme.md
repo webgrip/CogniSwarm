@@ -1,4 +1,4 @@
-# CogniSwarm: an Autonomous Generative Instrument (AGI) that expands dramatically on the concept of AutoGPT and BabyAGI
+# CogniSwarm: an Autonomous Generative Inferencer (AGI) that expands dramatically on the concept of AutoGPT and BabyAGI
 
 # copywrite statement
 <details>
