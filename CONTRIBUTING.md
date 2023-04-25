@@ -31,7 +31,7 @@ Join us on this exciting journey – donate today and be part of the AI revoluti
 -------------------
 ## help us with development! 
 
-1. **Fork the repository**: Start by forking the [PuttyGPT repository](https://github.com/webgrip/cogniswarm) and creating a local clone on your computer.
+1. **Fork the repository**: Start by forking the [CogniSwarm repository](https://github.com/webgrip/cogniswarm) and creating a local clone on your computer.
 2. **Create a branch**: Create a new branch based on the `main` branch. Use a descriptive name for your branch, such as `feature/your-feature-name` or `fix/your-fix-name`.
 3. **Commit your changes**: Make your changes or additions to the code, ensuring that your changes adhere to the project's code style and guidelines. Commit your changes with a clear and concise commit message.
 4. **Test your changes**: Before submitting your contribution, ensure that your changes pass all tests and do not introduce any new bugs or issues.
