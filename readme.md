@@ -138,7 +138,7 @@ Leveraging the power of cutting-edge technologies, CogniSwarm offers a wide arra
 - [1/2] **Exceptional Language Understanding**: Improved communication and comprehension
 - [x] **User Customization**: Tailor the AGI to your needs
 - [x] **Security & Privacy**: Local data storage and adaptive memory system for enhanced protection
-- [1/2] **Feature rich AutoML suite including customizable drop in guis for transformers, tensorflow, deepspeed, and my own personal compression workflow which combines several popular and lesser known techniques to achieve extremely high levels of compression while maintaining accuracy to a far higher degree than currently implemented and popularized methods.
+- [1/2] **Feature rich AutoML**: suite including customizable drop in guis for transformers, tensorflow, deepspeed, and my own personal compression workflow which combines several popular and lesser known techniques to achieve extremely high levels of compression while maintaining accuracy to a far higher degree than currently implemented and popularized methods.
 
 Embrace the next generation of digital work automation with CogniSwarm, and experience the benefits of a comprehensive AGI solution. Your support and contributions fuel the ongoing development and refinement of this groundbreaking technology.
 
