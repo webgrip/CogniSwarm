@@ -16,14 +16,19 @@ ENV VIRTUAL_ENV=/opt/venv
 RUN python3 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
-COPY Eve/requirements.txt .
-
+COPY Eve/requirements-compiled.txt .
 RUN pip3 install --upgrade pip
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements-compiled.txt
 
-FROM builder AS final
+FROM builder AS prebuilt
 
-COPY --from=builder /opt/venv /opt/venv
+COPY Eve/requirements-prebuilt.txt .
+RUN pip3 install --upgrade pip
+RUN pip3 install --no-cache-dir -r requirements-prebuilt.txt
+
+FROM prebuilt AS final
+
+COPY --from=prebuilt /opt/venv /opt/venv
 COPY --from=builder /usr/include/xlocale.h /usr/include/xlocale.h
 ENV PATH=/opt/venv/bin:$PATH
 
@@ -31,5 +36,4 @@ WORKDIR /app
 
 COPY ./Eve ./app
 
-#CMD [ "/venv/bin/python", "main.py" ]
 ENTRYPOINT ["tail", "-f", "/dev/null"]

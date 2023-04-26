@@ -51,7 +51,7 @@ services:
       - ./Eve/:/app
     networks:
       - weaviate-network
-      - putty-network
+      - cogniswarm-network
     depends_on:
     - weaviate
 
@@ -126,7 +126,7 @@ services:
 
 networks:
 
-  putty-network:
+  cogniswarm-network:
     external: true
     
 
