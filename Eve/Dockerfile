@@ -15,6 +15,7 @@ RUN rm -rf /var/cache/apk/*
 ENV VIRTUAL_ENV=/opt/venv
 RUN python3 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+WORKDIR /app
 
 COPY Eve/requirements-compiled.txt .
 RUN pip3 install --upgrade pip

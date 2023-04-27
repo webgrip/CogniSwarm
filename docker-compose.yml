@@ -25,18 +25,18 @@ services:
   #    - "5003:5003"
   #  command: langflow --host 0.0.0.0
 
-  #flowise:
-  #  build:
-  #    context: .
-  #    dockerfile: flowize/Dockerfile
-  #  restart: always
-  #  environment:
-  #      - PORT=5004
-  #  ports:
-  #      - 5004:5004
-  #  volumes:
-  #      - ~/.flowise:/root/.flowise
-  #  command: /bin/sh -c "sleep 3; flowise start"
+  flowise:
+    build:
+      context: .
+      dockerfile: flowize/Dockerfile
+    restart: always
+    environment:
+        - PORT=5004
+    ports:
+        - 5004:5004
+    volumes:
+        - ~/.flowise:/root/.flowise
+    command: /bin/sh -c "sleep 3; flowise start"
     
   eve:
     container_name: eve
