@@ -93,7 +93,7 @@ retriever = TimeWeightedVectorStoreRetriever(vectorstore=vectorstore, other_scor
 
 llm = ChatOpenAI(model="text-davinci-003", temperature=0.415, max_tokens=1500, streaming=True, callback_manager=callback_manager) 
 
-llm = OpenAI(model="text-davinci-003", temperature=0.415, max_tokens=1500, streaming=True, callback_manager=callback_manager)
+llm = OpenAI(model="gpt3.5-turbo", temperature=0.415, max_tokens=1500, streaming=True, callback_manager=callback_manager)
 
 
 
