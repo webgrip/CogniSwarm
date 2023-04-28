@@ -39,8 +39,10 @@ callback_manager = CallbackManager([StdOutCallbackHandler(), tracer])
 
 openai = OpenAI(callback_manager=callback_manager)
 
-memory = ConversationBufferMemory(memory_key="chat_history")
+memory = ConversationBufferMemory(memory_key="chat_history", input_key='input', output_key="output")
 readonlymemory = ReadOnlySharedMemory(memory=memory)
+
+
 
 client = weaviate.Client(
     url=WEAVIATE_HOST,
@@ -212,6 +214,7 @@ with open('prompts/ryan.txt', 'rb') as fp:
 parser = CustomOutputParser()
 formatted_prompt = AutonomousAgentPromptTemplate(
     input_variables=[ "operating_system", "objective", "task", "agent_name", "input", "intermediate_steps", "agent_scratchpad"],
+#output_keys=['intermediate_steps', 'output'],
     partial_variables={"agent_summary": generative_agent.get_summary(True)},
     output_parser=parser,
     template=template,
@@ -244,14 +247,43 @@ from langchain.agents import initialize_agent
 
 
 
-llm_chain = LLMChain(llm=llm, prompt=formatted_prompt, callback_manager=callback_manager)
+llm_chain = LLMChain(
+    llm=llm,
+    prompt=formatted_prompt,
+    callback_manager=callback_manager,
+    memory=readonlymemory,
+    output_key='output'
+)
 tool_names = [tool.name for tool in tools]
 agent = ZeroShotAgent(llm_chain=llm_chain, allowed_tools=tool_names)
 
 
-#agent = initialize_agent(tools, llm, agent=AgentType.CHAT_ZERO_SHOT_REACT_DESCRIPTION, verbose=True)
+agent_executor = initialize_agent(
+    tools=tools,
+    llm=llm,
+    agent=AgentType.CHAT_ZERO_SHOT_REACT_DESCRIPTION,
+    agent_kwargs={
+        "output_parser": parser,
+        #"system_message": self.system_message
+    },
+    #agent_kwargs=
+    #    {
+    #        'llm_chain':llm_chain,
+    #        'allowed_tools': tool_names
+    #    }
+    #,
+    early_stopping_method="generate",
+    callback_manager=callback_manager,
+    memory=readonlymemory,
+    
+    llm_chain=llm_chain,
+    allowed_tools=tool_names,
 
-agent_executor = AgentExecutor.from_agent_and_tools(agent=agent, tools=tools, verbose=True, callback_manager=callback_manager)
+    return_intermediate_steps=True,
+    verbose=True,
+)
+
+#agent_executor = AgentExecutor.from_agent_and_tools(agent=agent, tools=tools, verbose=True, callback_manager=callback_manager, return_intermediate_steps=True)
 
 
 
@@ -275,6 +307,7 @@ baby_agi(
         "operating_system": operating_system,
         "tool_names": tool_names,
         "tools_summary": tools_summary,
-        "agent_summary": generative_agent.get_summary(True)
+        "agent_summary": generative_agent.get_summary(True),
+        "return_only_outputs": True
     }
 )
