@@ -14,6 +14,11 @@ from langchain.vectorstores import Weaviate
 from langchain.retrievers import TimeWeightedVectorStoreRetriever
 from langchain.memory import ConversationBufferMemory, ReadOnlySharedMemory
 from langchain.agents import ZeroShotAgent, Tool, AgentExecutor
+from langchain.output_parsers import ( RetryWithErrorOutputParser, PydanticOutputParser )
+from pydantic import BaseModel, Field, validator
+from langchain import PromptTemplate
+from prompts.AutonomousAgentPromptTemplate import AutonomousAgentPromptTemplate
+from output_parsers.CustomOutputParser import CustomOutputParser
 
 from agents.AutonomousAgent import AutonomousAgent
 from tools import create_tools
@@ -21,6 +26,8 @@ from tools import create_tools
 from langchain.chat_models import ChatOpenAI
 
 from langchain.chains import RetrievalQA
+from datetime import datetime
+import platform
 
 
 WEAVIATE_HOST = os.getenv("WEAVIATE_HOST", "")
@@ -86,18 +93,11 @@ llm = ChatOpenAI(model="text-davinci-003", temperature=0.415, max_tokens=1500, s
 
 llm = OpenAI(model="text-davinci-003", temperature=0.415, max_tokens=1500, streaming=True, callback_manager=callback_manager)
 
-autonomousAgent = AutonomousAgent().make(
-    name="Ryan",
-    age=28,
-    traits="loyal, experimental, hopeful, smart, world class programmer",
-    status="Executing the task",
-    reflection_threshold=8,
-    llm=llm,
-    daily_summaries=[
-        "Just woke up, ready and eager to start working"
-    ],
-    verbose=True,
-)
+
+
+
+
+
 
 ##### IDEA: Make a prompt, and let this thing generate the descriptions of what it is and what it's doing, still keep the {objective}
 #### TODO Playwright
@@ -158,76 +158,112 @@ tools.append(
     )
 )
 
+#prompt = ZeroShotAgent.create_prompt(
+#    tools=tools,
+#    prefix="You are an AI who performs one task based on the following objective: {objective}. Take into account these previously completed tasks: {context}.",
+#    suffix="Question: {task}\n{agent_scratchpad}",
+#    input_variables=["objective", "task", "context", "agent_scratchpad"],
+#)
 
 OBJECTIVE = "Scan the repository you're in and make a detailed analysis of it. Then put it in a file called 'helloworld.md'"
 
+operating_system = platform.platform()
+autonomous_agent = AutonomousAgent()
 
-
-
-
-prompt = ZeroShotAgent.create_prompt(
-    tools=tools,
-    prefix="You are an AI who performs one task based on the following objective: {objective}. Take into account these previously completed tasks: {context}.",
-    suffix="Question: {task}\n{agent_scratchpad}",
-    input_variables=["objective", "task", "context", "agent_scratchpad"],
+generative_agent = autonomous_agent.make_agent(
+    name="Ryan",
+    age=28,
+    traits="loyal, experimental, hopeful, smart, world class programmer",
+    status="Executing the task",
+    llm=llm,
+    daily_summaries=[
+        "Just woke up, ready and eager to start working"
+    ],
+    reflection_threshold=8,
+    memory_retriever=retriever,
+    verbose=True
 )
 
-
-from datetime import datetime
-import platform
-
-def _get_datetime():
-    now = datetime.now()
-    return now.strftime("%m/%d/%Y, %H:%M:%S")
-
-operating_system = platform.platform()
-
-autonomousAgent.add_memory("I have been given a new objective:{}".format(OBJECTIVE))
+generative_agent.add_memory("I have been given a new objective:{}".format(OBJECTIVE))
 
 tools_summary = "\n".join([f"{tool.name}: {tool.description}" for tool in tools])
 tool_names = ", ".join([tool.name for tool in tools])
 
 
 
-prompt = AutonomousAgent.getPrompt(generativeAgent=autonomousAgent, objective=OBJECTIVE, operating_system=operating_system, tool_names=tool_names, tools_summary=tools_summary, )
-
-
-print(prompt)
-exit
 
 
 
 
-llm_chain = LLMChain(llm=llm, prompt=prompt, callback_manager=callback_manager)
+
+
+class Actor(BaseModel):
+    name: str = Field(description="name of the agent")
+    #film_names: List[str] = Field(description="list of names of films they starred in")
+
+# Set up a parser + inject instructions into the prompt template.
+#parser = RetryWithErrorOutputParser()
+parser = PydanticOutputParser(pydantic_object=Actor)
+
+
+with open('prompts/ryan.txt', 'rb') as fp:
+            template = fp.read()
+
+parser = CustomOutputParser()
+formatted_prompt = AutonomousAgentPromptTemplate(
+    input_variables=[ "operating_system", "objective", "task", "agent_name", "input", "intermediate_steps", "agent_scratchpad"],
+    partial_variables={"agent_summary": generative_agent.get_summary(True)},
+    output_parser=parser,
+    template=template,
+    tools=tools
+)
+
+print(formatted_prompt)
+
+#prompt = CustomPromptTemplate(
+#    template=template,
+#    tools=tools,
+#    # This omits the `agent_scratchpad`, `tools`, and `tool_names` variables because those are generated dynamically
+#    # This includes the `intermediate_steps` variable because that is needed
+#    input_variables=["input", "intermediate_steps"]
+#)
+
+#formatted_prompt = autonomous_agent.get_prompt(
+#    generative_agent=generative_agent,
+#    tools=tools
+#)
+
+
+
+
+
+
+
+from langchain.agents import AgentType
+from langchain.agents import initialize_agent
+
+
+
+llm_chain = LLMChain(llm=llm, prompt=formatted_prompt, callback_manager=callback_manager)
 tool_names = [tool.name for tool in tools]
 agent = ZeroShotAgent(llm_chain=llm_chain, allowed_tools=tool_names)
+
+
+#agent = initialize_agent(tools, llm, agent=AgentType.CHAT_ZERO_SHOT_REACT_DESCRIPTION, verbose=True)
+
 agent_executor = AgentExecutor.from_agent_and_tools(agent=agent, tools=tools, verbose=True, callback_manager=callback_manager)
 
 
 
-verbose = True
+
 max_iterations: Optional[int] = 10
-
-from pydantic import BaseModel, Field, validator
-# Define your desired data structure.
-class Joke(BaseModel):
-    setup: str = Field(description="question to set up a joke")
-    punchline: str = Field(description="answer to resolve the joke")
-    
-    # You can add custom validation logic easily with Pydantic.
-    @validator('setup')
-    def question_ends_with_question_mark(cls, field):
-        if field[-1] != '?':
-            raise ValueError("Badly formed question!")
-        return field
-
 
 
 baby_agi = BabyAGI.from_llm(
     llm=llm,
     vectorstore=vectorstore,
     task_execution_chain=agent_executor,
-    verbose=verbose,
+    verbose=True,
     max_iterations=max_iterations
 )
 
@@ -235,15 +271,10 @@ baby_agi(
     {
         "objective": OBJECTIVE,
         "task": OBJECTIVE,
-        "agent_name": "Ryan",
+        "agent_name": generative_agent.name,
         "operating_system": operating_system,
         "tool_names": tool_names,
         "tools_summary": tools_summary,
-        "agent_summary": autonomousAgent.get_summary(True)
-    },
-    
-    
-    
-    
-    
+        "agent_summary": generative_agent.get_summary(True)
+    }
 )

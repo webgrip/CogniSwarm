@@ -27,9 +27,15 @@ COPY Eve/requirements-prebuilt.txt .
 RUN pip3 install --upgrade pip
 RUN pip3 install --no-cache-dir -r requirements-prebuilt.txt
 
-FROM prebuilt AS final
+FROM prebuilt AS extra
 
-COPY --from=prebuilt /opt/venv /opt/venv
+COPY Eve/requirements-extra.txt .
+RUN pip3 install --upgrade pip
+RUN pip3 install --no-cache-dir -r requirements-extra.txt
+
+FROM extra AS final
+
+COPY --from=extra /opt/venv /opt/venv
 COPY --from=builder /usr/include/xlocale.h /usr/include/xlocale.h
 ENV PATH=/opt/venv/bin:$PATH
 

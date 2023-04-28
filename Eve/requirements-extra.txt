@@ -1,0 +1,2 @@
+pexpect~=4.8.0
+guardrails-ai~=0.1.6
