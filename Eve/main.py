@@ -146,7 +146,7 @@ tools.append(
         func=todo_chain.run,
         description="useful for when you need to come up with todo lists. Input: an objective to create a todo list for. Output: a todo list for that objective. Please be very clear what the objective is!",
         callback_manager=callback_manager,
-        return_direct=True
+        #return_direct=True
     )
 )
 
@@ -156,7 +156,7 @@ tools.append(
         func=memory_chain.run,
         description="Always do this first. Useful for when you need to access memory of events or people or things that happened recently or longer ago.",
         callback_manager=callback_manager,
-        return_direct=True
+        #return_direct=True
     )
 )
 
@@ -216,7 +216,7 @@ formatted_prompt = AutonomousAgentPromptTemplate(
     input_variables=[ "operating_system", "objective", "task", "agent_name", "input", "intermediate_steps", "agent_scratchpad"],
 #output_keys=['intermediate_steps', 'output'],
     partial_variables={"agent_summary": generative_agent.get_summary(True)},
-    output_parser=parser,
+    #output_parser=parser,
     template=template,
     tools=tools
 )
@@ -263,7 +263,7 @@ agent_executor = initialize_agent(
     llm=llm,
     agent=AgentType.CHAT_ZERO_SHOT_REACT_DESCRIPTION,
     agent_kwargs={
-        "output_parser": parser,
+        #"output_parser": parser,
         #"system_message": self.system_message
     },
     #agent_kwargs=

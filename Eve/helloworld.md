@@ -1,0 +1,25 @@
+total 36
+-rwxrwxrwx    1 root     root          1462 Apr 27 05:30 Dockerfile
+-rwxrwxrwx    1 root     root          8032 Apr 20 17:25 Eve.pyproj
+-rwxrwxrwx    1 root     root           227 Apr 15 16:07 Eve.pyproj.user
+drwxr-xr-x    1 root     root          4096 Apr 27 00:11 __pycache__
+drwxrwxrwx    1 root     root          4096 Apr 28 01:27 agents
+drwxrwxrwx    1 root     root          4096 Apr 28 01:27 chains
+drwxrwxrwx    1 root     root          4096 Apr 28 01:27 characters
+drwxrwxrwx    1 root     root          4096 Apr 28 01:27 data
+drwxrwxrwx    1 root     root          4096 Apr 26 06:40 env
+drwxrwxrwx    1 root     root          4096 Apr 28 01:26 experiments
+-rw-r--r--    1 root     root             0 Apr 28 20:04 helloworld.md
+-rwxrwxrwx    1 root     root          9830 Apr 28 20:01 main.py
+drwxrwxrwx    1 root     root          4096 Apr 28 01:26 old
+drwxrwxrwx    1 root     root          4096 Apr 28 19:08 output_parsers
+drwxrwxrwx    1 root     root          4096 Apr 28 01:58 prompts
+drwxrwxrwx    1 root     root          4096 Apr 28 01:26 protos
+-rwxrwxrwx    1 root     root           142 Apr 27 00:53 requirements-compiled.txt
+-rwxrwxrwx    1 root     root            36 Apr 27 12:54 requirements-extra.txt
+-rwxrwxrwx    1 root     root            99 Apr 26 23:51 requirements-prebuilt.txt
+drwxrwxrwx    1 root     root          4096 Apr 17 06:45 retrievers
+drwxrwxrwx    1 root     root          4096 Apr 28 01:26 toddleragi
+-rwxrwxrwx    1 root     root          4131 Apr 25 16:03 tools.py
+drwxrwxrwx    1 root     root          4096 Apr 28 01:26 vectorstores
+-rwxrwxrwx    1 root     root          1180 Apr 17 07:18 weaviate_schema.py

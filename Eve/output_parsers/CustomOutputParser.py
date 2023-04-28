@@ -15,7 +15,7 @@ class CustomOutputParser(AgentOutputParser):
                 log=llm_output,
             )
         # Parse out the action and action input
-        regex = r"Action\s*\d*\s*:(.*?)\nAction\s*\d*\s*Input\s*\d*\s*:[\s]*(.*)"
+        regex = r"Action\s*\d*\s*:[\s]*(.*?)[\s]*Action\s*\d*\s*Input\s*\d*\s*:[\s]*(.*)"
         match = re.search(regex, llm_output, re.DOTALL)
         if not match:
             raise ValueError(f"Could not parse LLM output: `{llm_output}`")
