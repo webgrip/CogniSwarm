@@ -1,6 +1,6 @@
 # CogniSwarm: an Autonomous Generative Inferencer (AGI) that expands dramatically on the concept of AutoGPT and BabyAGI
 
-# 🚧 Before you proceed 🚧
+# 🚧 Before you proceed 🚧 #
 Please note that this is a very early version of the project, and we are still in the process of wrapping things up, wiring components together, and experimenting with new ideas. As such, the project may undergo significant changes and updates as we continue to evolve and refine our vision. Any ideas are welcome and I will get back to you as soon as I can. Click here if youre interested in [Contributing](CONTRIBUTING.md)
 
 <details>
