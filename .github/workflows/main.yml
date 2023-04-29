@@ -36,7 +36,6 @@ jobs:
         with:
           images: |
             webgrip/cogniswarm
-            ghcr.io/${{ github.repository }}
           tags: |
             type=ref,event=branch
             type=ref,event=pr
