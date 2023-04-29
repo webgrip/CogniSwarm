@@ -54,7 +54,7 @@ networks:
   default:
     name: weaviate-network
 
-  putty-network:
+  cogniswarm-network:
     external: true
 
 volumes:
